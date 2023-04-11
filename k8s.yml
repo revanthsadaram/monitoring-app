@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+        name: monitoring-app
+spec:
+        containers:
+                - name: cloud-native-monitoring-app
+                  image: revanthsadaram/devops-project:v1.0
+                  ports:
+                  - containerPort: 5000
+        tolerations:
+                - key: "key"
+                  operator: "Exists"
+                  effect: "NoSchedule"
+
